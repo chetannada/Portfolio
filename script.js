@@ -38,7 +38,11 @@ $(document).ready(function () {
   // Scroll up Button script end
 
   // animation Script for display
-  const animationScript = ["Front End Developer", "React.js Developer", "Next.js Developer"];
+  const animationScript = [
+    "Front End Developer",
+    "React.js Developer",
+    "Next.js Developer",
+  ];
 
   // Typing animation script start
   new Typed(".typing", {
@@ -90,4 +94,4 @@ $(document).ready(function () {
 // Get the current year
 const currentYear = new Date().getFullYear();
 // Set the current year in the span with id "year"
-document.getElementById('year').textContent = currentYear;
+document.getElementById("year").textContent = currentYear;
