@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { poppins } from "@/fonts";
+import { ThemeProvider } from "@/views/context/ThemeContext";
+import Header from "@/views/components/Header";
 import { Toaster } from "react-hot-toast";
 
+const BASE_URL = "https://chetannada.netlify.app";
+
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Chetan Nada | Full-Stack Web Developer Portfolio",
   description:
-    "Chetan Nada's personal portfolio website showcasing projects, skills, and experience in web development.",
+    "Chetan Nada's personal portfolio website showcasing projects, skills, and experience in modern web development using Next.js, TypeScript, and React.",
   keywords: [
     "Chetan Nada",
     "Portfolio",
@@ -20,6 +25,29 @@ export const metadata: Metadata = {
   authors: [
     { name: "Chetan Nada", url: "https://www.linkedin.com/in/chetannada/" },
   ],
+  generator: "Next.js",
+
+  // --- Canonical URL and Robots ---
+  metadataBase: new URL(BASE_URL),
+  alternates: {
+    canonical: BASE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  // --- Additional Headers/Tags  ---
+  other: {
+    referrer: "no-referrer",
+  },
 };
 
 export default function RootLayout({
@@ -28,18 +56,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-body-light dark:bg-body-dark text-text-light dark:text-text-dark">
-        {children}
-
-        <Toaster
-          position="top-center"
-          toastOptions={{
-            success: { style: { background: "green", color: "white" } },
-            error: { style: { background: "red", color: "white" } },
-            duration: 3000,
-          }}
-        />
+    <html lang="en" className={`${poppins.variable}`}>
+      <body className={`min-h-screen bg-body text-text ${poppins.className}`}>
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Toaster position="top-right" />
+        </ThemeProvider>
       </body>
     </html>
   );
