@@ -4,6 +4,8 @@ import { poppins } from "@/fonts";
 import { ThemeProvider } from "@/views/context/ThemeContext";
 import Header from "@/views/components/Header";
 import { Toaster } from "react-hot-toast";
+import ContentWrapper from "@/views/components/ContentWrapper";
+import Footer from "@/views/components/Footer";
 
 const BASE_URL = "https://chetannada.netlify.app";
 
@@ -60,7 +62,11 @@ export default function RootLayout({
       <body className={`min-h-screen bg-body text-text ${poppins.className}`}>
         <ThemeProvider>
           <Header />
-          {children}
+
+          <ContentWrapper>{children}</ContentWrapper>
+
+          <Footer />
+
           <Toaster position="top-right" />
         </ThemeProvider>
       </body>

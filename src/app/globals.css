@@ -16,7 +16,7 @@ body {
   /* Custom Colors (--color-*) */
   /* variables with their LIGHT MODE color */
   --color-primary: #fafafa;
-  --color-secondary: #ff914d;
+  --color-secondary: #c25817;
   --color-body: #fefefe;
   --color-card: #f0f0f0;
   --color-text: #111724;
@@ -57,7 +57,7 @@ body {
     @variant dark {
       /* variables with their DARK MODE colors */
       --color-primary: #0d0d0d;
-      --color-secondary: #ffb86b;
+      --color-secondary: #fc9423;
       --color-body: #0c0c0c;
       --color-card: #0a0a0a;
       --color-text: #ebeced;
