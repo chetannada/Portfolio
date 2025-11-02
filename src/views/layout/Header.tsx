@@ -5,7 +5,7 @@ import ThemeToggle from "../theme/ThemeToggle";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import Sidebar from "./Sidebar";
 import useWindowSize from "../hooks/useWindowSize";
-import Logo from "../layout/Logo";
+import Logo from "./Logo";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
