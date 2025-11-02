@@ -1,12 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ThemeToggle from "../theme/ThemeToggle";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import Sidebar from "./Sidebar";
+import useWindowSize from "../hooks/useWindowSize";
+import Logo from "../layout/Logo";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const windowSize = useWindowSize();
+
+  useEffect(() => {
+    if (windowSize.width > 1024) {
+      setSidebarOpen(false);
+    }
+  }, [windowSize.width]);
 
   const handleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -14,12 +24,7 @@ const Header = () => {
     <header className="fixed top-0 z-50 px-8 max-2xs:px-4 h-14 w-full bg-primary border-b-4 border-b-secondary transition-colors duration-300">
       <nav className="flex justify-between items-center h-full">
         <a href="/">
-          <h1
-            className={`text-2xl max-2xs:text-xl max-3xs:text-base font-semibold tracking-widest`}
-          >
-            portfo
-            <span className="text-secondary">lio.</span>
-          </h1>
+          <Logo />
         </a>
 
         <div className="flex items-center gap-2">
