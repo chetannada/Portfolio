@@ -6,6 +6,7 @@ import { IoMdClose, IoMdMenu } from "react-icons/io";
 import Sidebar from "./Sidebar";
 import useWindowSize from "../hooks/useWindowSize";
 import Logo from "./Logo";
+import SectionNav from "./SectionNav";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,6 +29,7 @@ const Header = () => {
         </a>
 
         <div className="flex items-center gap-2">
+          <SectionNav />
           <ThemeToggle />
 
           <div
@@ -38,11 +40,7 @@ const Header = () => {
           </div>
         </div>
 
-        {sidebarOpen && (
-          <>
-            <Sidebar sidebarOpen={sidebarOpen} />
-          </>
-        )}
+        {sidebarOpen && <Sidebar sidebarOpen={sidebarOpen} />}
       </nav>
     </header>
   );
