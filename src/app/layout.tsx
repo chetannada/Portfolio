@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { poppins } from "@/fonts";
+import { pacifico, poppins } from "@/fonts";
 import { ThemeProvider } from "@/views/context/ThemeContext";
 import Header from "@/views/layout/Header";
 import { Toaster } from "react-hot-toast";
@@ -58,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${pacifico.variable}`}>
       <body className={`min-h-screen bg-body text-text ${poppins.className}`}>
         <ThemeProvider>
           <Header />
