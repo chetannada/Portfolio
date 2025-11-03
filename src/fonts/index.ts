@@ -1,10 +1,10 @@
-import { Poppins, Pacifico } from "next/font/google";
+import { Pacifico, PT_Mono } from "next/font/google";
 
-export const poppins = Poppins({
+export const ptMono = PT_Mono({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-poppins",
+  weight: ["400"],
+  style: ["normal"],
+  variable: "--font-ptmono",
   display: "swap",
 });
 

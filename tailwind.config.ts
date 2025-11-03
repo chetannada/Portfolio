@@ -4,7 +4,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-poppins)", "sans-serif"],
+        mono: ["var(--font-ptmono)", "monospace"],
         pacifico: ["var(--font-pacifico)", "cursive"],
       },
     },
