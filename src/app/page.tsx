@@ -1,5 +1,7 @@
-const Home = () => {
-  return <></>;
+import Home from "@/views/components/sections/Home";
+
+const Page = () => {
+  return <Home />;
 };
 
-export default Home;
+export default Page;
