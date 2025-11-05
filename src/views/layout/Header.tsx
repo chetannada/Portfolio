@@ -22,7 +22,7 @@ const Header = () => {
   const handleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   return (
-    <header className="fixed top-0 z-50 px-16 max-xs:px-4 h-14 w-full bg-primary border-b-4 border-b-secondary transition-colors duration-300">
+    <header className="fixed top-0 z-50 px-16 max-xs:px-8 h-16 w-full bg-primary border-b-2 border-b-secondary transition-colors duration-300">
       <nav className="flex justify-between items-center h-full">
         <a href="/">
           <Logo />
@@ -34,7 +34,7 @@ const Header = () => {
 
           <div
             onClick={handleSidebar}
-            className="hidden max-lg:block ml-1 text-3xl max-xs:text-2xl cursor-pointer"
+            className="hidden max-lg:block ml-1 text-4xl cursor-pointer"
           >
             {sidebarOpen ? <IoMdClose /> : <IoMdMenu />}
           </div>
