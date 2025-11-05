@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* Custom Dark Variant Definition */
+/* This tells Tailwind to apply dark:* styles when the .dark class is on any parent element. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+@theme {
+  /* Custom Colors (--color-*) */
+  /* variables with their LIGHT MODE color */
+  --color-primary: #fafafa;
+  --color-secondary: #c25817;
+  --color-body: #fefefe;
+  --color-card: #f0f0f0;
+  --color-text: #111724;
+  --color-hover: #f2f2f2;
+  --color-border: #d4d4d4;
+  --color-skeleton: #d1d5db;
+
+  /* Custom Breakpoints (--breakpoint-*) */
+  --breakpoint-2xl: 1536px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 900px;
+  --breakpoint-smPlus: 750px;
+  --breakpoint-sm: 640px;
+  --breakpoint-xsPlus: 520px;
+  --breakpoint-xs: 460px;
+  --breakpoint-2xs: 400px;
+  --breakpoint-3xs: 340px;
+  --breakpoint-4xs: 320px;
+
+  /* Custom Spacing (--spacing-*) */
+  --spacing-13: 52px;
+  --spacing-15: 60px;
+  --spacing-68: 17rem;
+  --spacing-88: 22rem;
+  --spacing-102: 26rem;
+  --spacing-108: 28rem;
+  --spacing-128: 32rem;
+  --spacing-140: 36rem;
+  --spacing-152: 40rem;
+  --spacing-164: 44rem;
+  --spacing-176: 48rem;
+  --spacing-180: 52rem;
+}
+
+@layer theme {
+  :root {
+    @variant dark {
+      /* variables with their DARK MODE colors */
+      --color-primary: #0d0d0d;
+      --color-secondary: #fc9423;
+      --color-body: #0c0c0c;
+      --color-card: #0a0a0a;
+      --color-text: #ebeced;
+      --color-hover: #061133;
+      --color-border: #4f4f4f;
+      --color-skeleton: #374151;
+    }
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+.animate-wave {
+  display: inline-block;
+  animation: wave 1.2s infinite;
+  transform-origin: 70% 70%;
+}
