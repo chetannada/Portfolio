@@ -5,12 +5,12 @@ import { FaHome, FaUser, FaDesktop, FaAddressCard } from "react-icons/fa";
 import { FaCodeFork, FaStar } from "react-icons/fa6";
 
 const navItems = [
-  { label: "Home", icon: <FaHome size={18} />, target: "#home" },
-  { label: "About", icon: <FaUser size={16} />, target: "#about" },
-  { label: "Projects", icon: <FaDesktop size={16} />, target: "#projects" },
+  { label: "Home", icon: <FaHome size={22} />, target: "#home" },
+  { label: "About", icon: <FaUser size={19} />, target: "#about" },
+  { label: "Projects", icon: <FaDesktop size={20} />, target: "#projects" },
   {
     label: "Contact",
-    icon: <FaAddressCard size={18} />,
+    icon: <FaAddressCard size={22} />,
     target: "#contact",
   },
 ];
@@ -25,11 +25,11 @@ const SectionNav = () => {
           whileHover={{ y: -2 }}
           className="group relative flex items-center gap-2 text-text"
         >
-          <span className="text-[17px]">{icon}</span>
-          <span className="text-base font-medium">{label}</span>
+          <span>{icon}</span>
+          <span className="text-xl font-medium">{label}</span>
           <motion.span
             layout
-            className="absolute left-0 -bottom-1.5 h-0.5 w-full bg-secondary origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+            className="absolute left-0 -bottom-1.5 h-1 w-full bg-secondary origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
           />
         </motion.a>
       ))}

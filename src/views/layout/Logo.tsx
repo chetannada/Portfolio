@@ -32,7 +32,7 @@ const Logo = () => {
         />
       ) : (
         <motion.h1
-          className={`text-2xl max-2xs:text-xl max-3xs:text-base tracking-widest ${pacifico.className}`}
+          className={`text-3xl max-2xs:text-2xl max-3xs:text-xl tracking-widest ${pacifico.className}`}
           initial="hidden"
           animate="visible"
           variants={logoVariant}

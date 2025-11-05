@@ -16,7 +16,7 @@ const Menu = ({
 }: MenuProps) => (
   <li
     className={clsx(
-      "flex items-center py-3 cursor-pointer hover:bg-hover-light hover:dark:bg-hover-dark transition-colors duration-200",
+      "flex items-center py-4 text-2xl cursor-pointer hover:bg-hover transition-colors duration-200",
       pxClass
     )}
     onClick={onClick}
