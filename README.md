@@ -1,42 +1,76 @@
-# ❤️ Chetan Nada's Portfolio 🙏
+# 🚀 Chetan Nada's Portfolio
 
-### _This is my Portfolio Project, I made it using HTML, CSS and Javascript._ [Watch Live](https://chetannada.netlify.app/)
+Welcome to my personal portfolio — a handcrafted showcase of my journey as a **Frontend Developer** and **Full-Stack Architect**. Originally built with HTML, CSS, and JavaScript, this project has now evolved into a modern, modular, and expressive experience powered by:
+
+- **Next.js** for performance and scalability
+- **TypeScript** for type safety and maintainability
+- **TailwindCSS** for rapid, responsive styling
+- **Framer Motion** for smooth, delightful animations
+
+- [🚀 _Watch Live_ 😍](https://chetannada.netlify.app)
+
+---
+
+## 🧠 About This Project
+
+This portfolio is more than a resume — it's a living canvas where I experiment with:
+
+- ✨ Emotionally resonant branding and layout naming
+- ⚙️ Modular architecture and reusable components
+- 🎨 Theme-aware particle effects and custom SVG illustrations
+
+Every detail is intentional — from icon alignment to animation polish.
+
+---
+
+## 🛠 Tech Stack
+
+| Layer     | Tools & Libraries          |
+| --------- | -------------------------- |
+| Framework | Next.js, React             |
+| Language  | TypeScript                 |
+| Styling   | TailwindCSS, MUI           |
+| Animation | Framer Motion, tsParticles |
+| Tooling   | ESLint, Git                |
+
+---
 
 ## 🔥 Clone this Repository
 
-You need to write the following commands on the terminal screen(in vscode) so that you can run this project locally.
+You need to write the following commands on the terminal screen (in vscode) so that you can run this project locally.
 
 ```bash
-  git clone "https://github.com/chetannada/Portfolio.git"
+git clone "https://github.com/chetannada/Portfolio.git"
 ```
 
 Go to the project directory
 
 ```bash
-  cd Portfolio
+cd Portfolio
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+npm install
 ```
 
-Start the server
+Run the application:
 
 ```bash
-  npm run start
+npm run dev
 ```
 
-This application should now be running on `localhost`. If you want to Fork repository and want to run locally, follow this guidelines [Fork and Clone Github Repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+This application should now be running on `http://localhost:3000`.
 
-## Related
+If you want to Fork repository and want to run locally, follow this guidelines [Fork and Clone Github Repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
-Here are some related projects
+## ✏️ Contributing
 
-[Portfolio Project using React SASS](https://github.com/chetannada/React-SASS-Portfolio)
+This is an Open-Source repository, and contributions are always welcome! If you find an issue, please create a new issue under the "Issues" section. To contribute code, fork the repository and submit a pull request. Your contributions will help make this a valuable resource for the community!
 
-## 🔗 Let's Connect
+## 🤝 Let's Connect
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chetannada/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/chetannada)
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chetannada/)
+[![twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/chetannada)
+[![discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discordapp.com/users/916005177838956555)
