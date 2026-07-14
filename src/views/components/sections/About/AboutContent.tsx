@@ -58,7 +58,6 @@ const AboutContent = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Section Label */}
       <motion.div variants={itemVariants} className="flex items-center gap-3">
         <span className="h-px w-8 bg-secondary" />
         <span className="text-secondary font-semibold tracking-widest uppercase text-sm flex items-center gap-1.5">
@@ -67,7 +66,6 @@ const AboutContent = () => {
         </span>
       </motion.div>
 
-      {/* Heading */}
       <motion.h2
         variants={itemVariants}
         className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
@@ -77,7 +75,6 @@ const AboutContent = () => {
         <span className="text-secondary">Powered by AI.</span>
       </motion.h2>
 
-      {/* Role Tags */}
       <motion.div
         variants={itemVariants}
         className="flex flex-wrap items-center gap-2 text-sm"
@@ -101,7 +98,6 @@ const AboutContent = () => {
         ))}
       </motion.div>
 
-      {/* Description Paragraphs */}
       <motion.p
         variants={itemVariants}
         className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed"
@@ -128,7 +124,6 @@ const AboutContent = () => {
         project featured on GitHub Trending.
       </motion.p>
 
-      {/* AI Paragraph with accent border */}
       <motion.div
         variants={itemVariants}
         className="relative pl-4 border-l-2 border-secondary/50"
@@ -169,7 +164,6 @@ const AboutContent = () => {
         developers grow and build great software.
       </motion.p>
 
-      {/* Tech Stack Pills */}
       <motion.div variants={itemVariants} className="mt-2">
         <p className="text-sm font-semibold tracking-wider uppercase text-neutral-500 dark:text-neutral-500 mb-3 flex items-center gap-2">
           <HiSparkles className="text-secondary text-base" />

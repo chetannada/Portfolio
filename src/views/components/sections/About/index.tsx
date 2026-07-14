@@ -13,10 +13,8 @@ const About = () => {
       <ParticlesBackground id="particles-about" />
 
       <div className="relative z-10 max-w-6xl w-full flex flex-col lg:flex-row items-start gap-16 lg:gap-20">
-        {/* Left Column – Text Content */}
         <AboutContent />
 
-        {/* Right Column – Highlights & Stats */}
         <AboutHighlights />
       </div>
     </section>

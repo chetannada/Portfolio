@@ -105,27 +105,21 @@ const AboutHighlights = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Orbit Animation */}
       <motion.div
         variants={cardVariants}
         className="relative w-full aspect-square max-w-[280px] mx-auto mb-4"
       >
-        {/* Subtle glow behind center */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-36 h-36 rounded-full bg-secondary/8 blur-3xl" />
         </div>
 
-        {/* Outer ring */}
         <div className="absolute inset-0 rounded-full border border-border/30" />
-        {/* Middle ring - dashed for visual interest */}
         <div className="absolute inset-8 rounded-full border border-dashed border-border/20" />
-        {/* Inner ring */}
         <div className="absolute inset-16 rounded-full border border-border/15" />
 
-        {/* Center avatar */}
         <div className="absolute inset-0 flex items-center justify-center">
           <motion.div
-            className="w-18 h-18 rounded-full bg-gradient-to-br from-secondary/90 to-secondary flex items-center justify-center shadow-xl shadow-secondary/25"
+            className="w-18 h-18 rounded-full bg-linear-to-br from-secondary/90 to-secondary flex items-center justify-center shadow-xl shadow-secondary/25"
             animate={{ scale: [1, 1.05, 1] }}
             transition={{
               duration: 4,
@@ -139,7 +133,6 @@ const AboutHighlights = () => {
           </motion.div>
         </div>
 
-        {/* Orbiting icons */}
         {orbitIcons.map(({ Icon, color, size }, i) => {
           const angle = (i * 360) / orbitIcons.length - 60;
           const radius = 44;
@@ -171,7 +164,6 @@ const AboutHighlights = () => {
         })}
       </motion.div>
 
-      {/* AI Focus Badge */}
       <motion.div variants={cardVariants} className="flex justify-center">
         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-br from-purple-500/10 via-secondary/10 to-blue-500/10 border border-secondary/20">
           <FaRobot className="text-secondary text-sm" />
@@ -181,7 +173,6 @@ const AboutHighlights = () => {
         </div>
       </motion.div>
 
-      {/* Stats Grid */}
       <motion.div
         variants={containerVariants}
         className="grid grid-cols-2 gap-3"
@@ -194,7 +185,6 @@ const AboutHighlights = () => {
             className="group relative overflow-hidden rounded-xl border border-border bg-card/50 backdrop-blur-sm p-4
                        hover:border-secondary/50 transition-all duration-300 cursor-default"
           >
-            {/* Subtle gradient overlay on hover */}
             <div className="absolute inset-0 bg-linear-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             <div className="relative z-10 flex flex-col gap-1">
@@ -210,7 +200,6 @@ const AboutHighlights = () => {
         ))}
       </motion.div>
 
-      {/* Highlight Cards */}
       <motion.div variants={containerVariants} className="flex flex-col gap-3">
         {highlights.map(({ emoji, title, description, isAI }) => (
           <motion.div
