@@ -4,7 +4,11 @@ import particlesConfig from "../../../config/particlesConfig";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticlesBackground = () => {
+type Props = {
+  id?: string;
+};
+
+const ParticlesBackground = ({ id = "tsparticles" }: Props) => {
   const [init, setInit] = useState(false);
   const { theme } = useTheme();
   const config = particlesConfig(theme);
@@ -20,12 +24,13 @@ const ParticlesBackground = () => {
   if (init) {
     return (
       <Particles
-        id="tsparticles"
+        id={id}
         options={config}
-        className="absolute inset-0 z-0 w-full h-full"
+        className="absolute inset-0 z-0 w-full h-full pointer-events-none"
       />
     );
   }
+
   return null;
 };
 

@@ -9,9 +9,9 @@ const Home = () => {
     <>
       <section
         id="home"
-        className="relative min-h-[calc(100vh-12rem)] flex items-center justify-center px-16 max-sm:px-0"
+        className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center px-16 max-sm:px-0"
       >
-        <ParticlesBackground />
+        <ParticlesBackground id="particles-home" />
 
         <div className="max-w-6xl w-full flex flex-col lg:flex-row items-center justify-center gap-8">
           <HeroContent />
