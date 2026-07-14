@@ -1,3 +1,5 @@
+"use client";
+
 import TypewriterComponent from "typewriter-effect";
 
 const Typewriter = () => {
@@ -5,15 +7,16 @@ const Typewriter = () => {
     <TypewriterComponent
       options={{
         strings: [
-          "React.js Developer",
-          "Next.js Developer",
-          "MERN Stack Developer",
-          "Open-Source Developer",
+          "Architecting scalable enterprise applications.",
+          "Building intelligent, AI-powered features.",
+          "Driving open-source innovation (2k+ Stars).",
+          "Engineering high-performance web interfaces.",
+          "Mentoring top engineering talent globally.",
         ],
         autoStart: true,
         loop: true,
-        delay: 75,
-        deleteSpeed: 50,
+        delay: 40,
+        deleteSpeed: 20,
       }}
     />
   );
