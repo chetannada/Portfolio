@@ -23,15 +23,10 @@ const Footer = () => {
       </a>
       <FaRegCopyright />
       {year}
-      <a
-        href="https://github.com/chetannada/Portfolio"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-semibold hover:underline tracking-widest"
-      >
+      <span className="font-semibold tracking-widest">
         portfo
         <span className="text-secondary">lio.</span>
-      </a>
+      </span>
     </footer>
   );
 };
