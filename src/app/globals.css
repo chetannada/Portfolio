@@ -4,6 +4,10 @@
 /* This tells Tailwind to apply dark:* styles when the .dark class is on any parent element. */
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }

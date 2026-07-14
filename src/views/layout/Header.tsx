@@ -7,6 +7,7 @@ import Sidebar from "./Sidebar";
 import useWindowSize from "../hooks/useWindowSize";
 import Logo from "./Logo";
 import SectionNav from "./SectionNav";
+import ParticlesBackground from "../components/sections/Home/ParticlesBackground";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -23,6 +24,8 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 z-50 px-16 max-xs:px-8 h-16 w-full bg-primary border-b-2 border-b-secondary transition-colors duration-300">
+      <ParticlesBackground id="particles-header" />
+
       <nav className="flex justify-between items-center h-full">
         <a href="/">
           <Logo />
