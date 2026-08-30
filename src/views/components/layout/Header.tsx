@@ -7,7 +7,7 @@ import Sidebar from "./Sidebar";
 import useWindowSize from "../../hooks/useWindowSize";
 import Logo from "./Logo";
 import SectionNav from "./SectionNav";
-import ParticlesBackground from "../Home/ParticlesBackground";
+import ParticlesBackground from "./ParticlesBackground";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
