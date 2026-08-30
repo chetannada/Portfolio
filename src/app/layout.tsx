@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { pacifico, ptMono } from "@/fonts";
-import { ThemeProvider } from "@/views/context/ThemeContext";
-import Header from "@/views/components/layout/Header";
+import { ThemeProvider } from "@/context/ThemeContext";
+import Header from "@/components/layout/Header";
 import { Toaster } from "react-hot-toast";
-import ContentWrapper from "@/views/components/layout/ContentWrapper";
-import Footer from "@/views/components/layout/Footer";
+import ContentWrapper from "@/components/layout/ContentWrapper";
+import Footer from "@/components/layout/Footer";
 
 const BASE_URL = "https://chetannada.netlify.app";
 

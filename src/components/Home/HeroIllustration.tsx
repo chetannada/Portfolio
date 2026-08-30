@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTheme } from "@/views/context/ThemeContext";
-import { FaRobot } from "react-icons/fa";
+import { useTheme } from "@/context/ThemeContext";
 import {
   SiReact,
   SiNextdotjs,
@@ -108,8 +107,8 @@ const HeroIllustration = () => {
           animate={{ rotate: 360 }}
           transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
         >
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-cyan-400/50" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-cyan-400/50" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-cyan-400/50" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-cyan-400/50" />
         </motion.div>
 
         <motion.div
@@ -123,8 +122,8 @@ const HeroIllustration = () => {
           animate={{ rotate: 360 }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         >
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-3 bg-cyan-400/80" />
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-3 bg-cyan-400/80" />
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-3 bg-cyan-400/80" />
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0.5 h-3 bg-cyan-400/80" />
         </motion.div>
 
         <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -134,7 +133,7 @@ const HeroIllustration = () => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
             <motion.div
-              className="absolute inset-[-2px] sm:inset-0 rounded-xl sm:rounded-2xl bg-linear-to-br from-secondary via-purple-500 to-blue-500 opacity-80 blur-md sm:blur-lg"
+              className="absolute -inset-0.5 sm:inset-0 rounded-xl sm:rounded-2xl bg-linear-to-br from-secondary via-purple-500 to-blue-500 opacity-80 blur-md sm:blur-lg"
               animate={{ rotate: 360 }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
             />

@@ -1,6 +1,6 @@
 "use client";
 
-import ParticlesBackground from "../Home/ParticlesBackground";
+import ParticlesBackground from "../layout/ParticlesBackground";
 import AboutContent from "./AboutContent";
 import AboutHighlights from "./AboutHighlights";
 

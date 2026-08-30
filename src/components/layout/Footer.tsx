@@ -3,7 +3,7 @@
 import { IoMdHeart } from "react-icons/io";
 import { FaRegCopyright } from "react-icons/fa6";
 import { useTheme } from "../../context/ThemeContext";
-import ParticlesBackground from "../sections/Home/ParticlesBackground";
+import ParticlesBackground from "./ParticlesBackground";
 
 const Footer = () => {
   const year = new Date().getFullYear();

@@ -1,6 +1,6 @@
 "use client";
 
-import ParticlesBackground from "./ParticlesBackground";
+import ParticlesBackground from "../layout/ParticlesBackground";
 import HeroContent from "./HeroContent";
 import HeroIllustration from "./HeroIllustration";
 

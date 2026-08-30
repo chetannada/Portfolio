@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useTheme } from "../../../context/ThemeContext";
-import particlesConfig from "../../../config/particlesConfig";
+import { useTheme } from "../../context/ThemeContext";
+import particlesConfig from "../../config/particlesConfig";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 

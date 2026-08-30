@@ -8,7 +8,7 @@ import {
   FaUsers,
   FaRobot,
 } from "react-icons/fa";
-import { useTheme } from "@/views/context/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 import {
   SiReact,
   SiNextdotjs,
