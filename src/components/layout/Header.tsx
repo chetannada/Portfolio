@@ -2,17 +2,19 @@
 
 import { useEffect, useState } from "react";
 import ThemeToggle from "../../theme/ThemeToggle";
-import { IoMdClose, IoMdMenu } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
 import Sidebar from "./Sidebar";
 import useWindowSize from "../../hooks/useWindowSize";
 import Logo from "./Logo";
 import SectionNav from "./SectionNav";
-import ParticlesBackground from "./ParticlesBackground";
+import useActiveSection from "../../hooks/useActiveSection";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const windowSize = useWindowSize();
+  const activeSection = useActiveSection();
 
   useEffect(() => {
     if (windowSize.width > 1024) {
@@ -20,31 +22,69 @@ const Header = () => {
     }
   }, [windowSize.width]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   return (
-    <header className="fixed top-0 z-50 px-16 max-xs:px-8 h-16 w-full bg-primary border-b-2 border-b-secondary transition-colors duration-300">
-      <ParticlesBackground id="particles-header" />
+    <header className="fixed top-0 left-0 right-0 z-50 header-floating">
+      <div
+        className={`header-glass transition-all duration-400 ${
+          scrolled ? "scrolled" : ""
+        }`}
+      >
+        <nav className="flex justify-between items-center h-16 max-w-7xl mx-auto px-8 sm:px-12 lg:px-20">
+          <a href="/" className="relative z-10 shrink-0">
+            <Logo />
+          </a>
 
-      <nav className="flex justify-between items-center h-full">
-        <a href="/">
-          <Logo />
-        </a>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <SectionNav activeSection={activeSection} />
 
-        <div className="flex items-center gap-2">
-          <SectionNav />
-          <ThemeToggle />
+            <div className="flex items-center rounded-full border border-border/40 bg-card/30 backdrop-blur-sm overflow-hidden">
+              <a
+                href="https://github.com/chetannada/Portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-spin flex items-center gap-2 px-3 sm:px-4 py-2 text-sm font-medium text-text hover:text-secondary hover:bg-secondary/10 transition-all duration-300 border-r border-border/40"
+              >
+                <FaGithub size={18} />
+                <span className="hidden sm:inline">GitHub</span>
+              </a>
+              <ThemeToggle />
+            </div>
+
+            <button
+              onClick={handleSidebar}
+              className={`hidden max-lg:flex hamburger-btn ml-1 ${
+                sidebarOpen ? "open" : ""
+              }`}
+              aria-label="Toggle navigation menu"
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
 
           <div
-            onClick={handleSidebar}
-            className="hidden max-lg:block ml-1 text-4xl cursor-pointer"
-          >
-            {sidebarOpen ? <IoMdClose /> : <IoMdMenu />}
-          </div>
-        </div>
-
-        {sidebarOpen && <Sidebar sidebarOpen={sidebarOpen} />}
-      </nav>
+            className={`sidebar-overlay ${sidebarOpen ? "active" : ""}`}
+            onClick={() => setSidebarOpen(false)}
+          />
+          <Sidebar
+            sidebarOpen={sidebarOpen}
+            onClose={() => setSidebarOpen(false)}
+            activeSection={activeSection}
+          />
+        </nav>
+      </div>
     </header>
   );
 };
