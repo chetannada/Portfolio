@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* Custom Dark Variant Definition */
-/* This tells Tailwind to apply dark:* styles when the .dark class is on any parent element. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
@@ -94,4 +92,294 @@ body {
   display: inline-block;
   animation: wave 1.4s ease-in-out infinite;
   transform-origin: 70% 70%;
+}
+
+@keyframes header-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-floating {
+  animation: header-slide-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.header-glass {
+  background: rgba(250, 250, 250, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:where(.dark, .dark *) .header-glass {
+  background: rgba(13, 13, 13, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.header-glass.scrolled {
+  background: rgba(250, 250, 250, 0.88);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.06),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+:where(.dark, .dark *) .header-glass.scrolled {
+  background: rgba(13, 13, 13, 0.82);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.nav-pill {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-pill::before {
+  content: "";
+  position: absolute;
+  inset: -4px -12px;
+  border-radius: 9999px;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+}
+
+.nav-pill:hover::before {
+  background: rgba(194, 88, 23, 0.08);
+}
+
+:where(.dark, .dark *) .nav-pill:hover::before {
+  background: rgba(252, 148, 35, 0.08);
+}
+
+.nav-pill.active::before {
+  background: rgba(194, 88, 23, 0.12);
+}
+
+:where(.dark, .dark *) .nav-pill.active::before {
+  background: rgba(252, 148, 35, 0.12);
+}
+
+.nav-pill.active {
+  color: var(--color-secondary);
+}
+
+.nav-pill .active-dot {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: var(--color-secondary);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 8px rgba(194, 88, 23, 0.5);
+}
+
+:where(.dark, .dark *) .nav-pill .active-dot {
+  box-shadow: 0 0 8px rgba(252, 148, 35, 0.5);
+}
+
+.nav-pill.active .active-dot {
+  transform: translateX(-50%) scale(1);
+}
+
+.hamburger-btn {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+:where(.dark, .dark *) .hamburger-btn {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hamburger-btn:hover {
+  background: rgba(194, 88, 23, 0.12);
+  border-color: rgba(194, 88, 23, 0.3);
+  transform: scale(1.05);
+}
+
+:where(.dark, .dark *) .hamburger-btn:hover {
+  background: rgba(252, 148, 35, 0.12);
+  border-color: rgba(252, 148, 35, 0.3);
+}
+
+.hamburger-btn span {
+  display: block;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 9999px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+
+.hamburger-btn span:nth-child(1) {
+  width: 20px;
+}
+
+.hamburger-btn span:nth-child(2) {
+  width: 13px;
+  background: var(--color-secondary);
+  align-self: flex-start;
+  margin-left: 10px;
+}
+
+.hamburger-btn:hover span:nth-child(2) {
+  width: 20px;
+  margin-left: 0;
+  align-self: center;
+}
+
+.hamburger-btn span:nth-child(3) {
+  width: 20px;
+}
+
+.hamburger-btn.open {
+  background: rgba(194, 88, 23, 0.15);
+  border-color: var(--color-secondary);
+}
+
+:where(.dark, .dark *) .hamburger-btn.open {
+  background: rgba(252, 148, 35, 0.15);
+  border-color: var(--color-secondary);
+}
+
+.hamburger-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--color-secondary);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-12px);
+  width: 0;
+}
+
+.hamburger-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--color-secondary);
+}
+
+.github-spin:hover svg {
+  animation: spin-once 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes spin-once {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 60;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sidebar-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(320px, 85vw);
+  height: 100vh;
+  z-index: 70;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-panel.open {
+  transform: translateX(0);
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 24px;
+  margin: 2px 12px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: all 0.25s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar-nav-item:hover {
+  background: var(--color-hover);
+}
+
+.sidebar-nav-item.active {
+  background: rgba(194, 88, 23, 0.1);
+  color: var(--color-secondary);
+}
+
+:where(.dark, .dark *) .sidebar-nav-item.active {
+  background: rgba(252, 148, 35, 0.1);
+}
+
+.sidebar-nav-item .sidebar-active-dot {
+  position: absolute;
+  right: 16px;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: var(--color-secondary);
+  transform: scale(0);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 8px rgba(252, 148, 35, 0.4);
+}
+
+.sidebar-nav-item.active .sidebar-active-dot {
+  transform: scale(1);
 }

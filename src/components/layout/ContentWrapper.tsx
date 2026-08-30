@@ -6,7 +6,7 @@ interface ContentWrapperProps {
 
 const ContentWrapper = ({ children }: ContentWrapperProps) => {
   return (
-    <main className="min-h-[calc(100vh-2.6rem)] mx-16 max-xs:mx-8 pt-20 pb-10">
+    <main className="min-h-[calc(100vh-2.6rem)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-24 pb-10">
       {children}
     </main>
   );
