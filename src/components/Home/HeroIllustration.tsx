@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTheme } from "@/views/context/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 import { FaRobot } from "react-icons/fa";
 import {
   SiReact,

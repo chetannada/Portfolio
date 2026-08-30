@@ -1,5 +1,5 @@
-import Home from "@/views/components/Home";
-import About from "@/views/components/About";
+import Home from "@/components/Home";
+import About from "@/components/About";
 
 const Page = () => {
   return (
