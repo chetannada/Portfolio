@@ -40,10 +40,19 @@ const Sidebar = ({ sidebarOpen, onClose, activeSection }: SidebarProps) => {
       document.body.classList.add("overflow-hidden");
     }
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && sidebarOpen) {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
     return () => {
       document.body.classList.remove("overflow-hidden");
+      window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [sidebarOpen]);
+  }, [sidebarOpen, onClose]);
 
   return (
     <div
