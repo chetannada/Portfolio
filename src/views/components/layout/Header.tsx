@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ThemeToggle from "../theme/ThemeToggle";
+import ThemeToggle from "../../theme/ThemeToggle";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import Sidebar from "./Sidebar";
-import useWindowSize from "../hooks/useWindowSize";
+import useWindowSize from "../../hooks/useWindowSize";
 import Logo from "./Logo";
 import SectionNav from "./SectionNav";
-import ParticlesBackground from "../components/sections/Home/ParticlesBackground";
+import ParticlesBackground from "../sections/Home/ParticlesBackground";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);

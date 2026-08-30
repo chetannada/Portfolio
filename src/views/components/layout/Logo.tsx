@@ -1,5 +1,5 @@
 import { pacifico } from "@/fonts";
-import useWindowSize from "../hooks/useWindowSize";
+import useWindowSize from "../../hooks/useWindowSize";
 import { motion, Variants } from "framer-motion";
 
 const logoVariant: Variants = {
