@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Menu from "../components/menu";
+import Menu from "../menu";
 import { IoHome } from "react-icons/io5";
 
 interface SidebarProps {
