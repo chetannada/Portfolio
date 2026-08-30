@@ -60,20 +60,20 @@ const Sidebar = ({ sidebarOpen, onClose, activeSection }: SidebarProps) => {
         sidebarOpen ? "open" : ""
       }`}
     >
-      <div className="flex items-center justify-between px-5 py-4 border-b border-border/20">
-        <a href="/" onClick={onClose}>
+      <div className="flex items-center justify-between px-5 h-16 border-b border-black/6 dark:border-white/6 shrink-0">
+        <a href="/" onClick={onClose} className="flex items-center">
           <Logo />
         </a>
         <button
           onClick={onClose}
-          className="p-2 rounded-xl hover:bg-hover transition-colors cursor-pointer"
+          className="w-10 h-10 rounded-xl flex items-center justify-center border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/4 hover:bg-secondary/10 hover:border-secondary/30 hover:text-secondary hover:scale-105 transition-all duration-300 cursor-pointer"
           aria-label="Close sidebar"
         >
-          <IoMdClose size={24} />
+          <IoMdClose size={22} />
         </button>
       </div>
 
-      <nav className="flex-1 py-4">
+      <nav className="flex-1 py-4 flex flex-col">
         {sidebarItems.map(({ icon, label, href, id }) => (
           <a
             key={label}
@@ -88,32 +88,32 @@ const Sidebar = ({ sidebarOpen, onClose, activeSection }: SidebarProps) => {
             <span className="sidebar-active-dot" />
           </a>
         ))}
-      </nav>
 
-      <div className="mt-auto px-4 pb-6">
-        <div className="flex items-center rounded-xl border border-border/30 bg-card/50 overflow-hidden">
-          <button
-            onClick={toggleTheme}
-            className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-medium hover:bg-hover transition-all duration-300 cursor-pointer border-r border-border/30"
-          >
-            {theme === "light" ? (
-              <MdDarkMode size={18} />
-            ) : (
-              <BsSunFill size={16} />
-            )}
-            <span>{theme === "light" ? "Dark" : "Light"}</span>
-          </button>
-          <a
-            href="https://github.com/chetannada/Portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-spin flex-1 flex items-center justify-center gap-2 py-3 text-sm font-medium hover:bg-hover transition-all duration-300"
-          >
-            <FaGithub size={18} />
-            <span>GitHub</span>
-          </a>
+        <div className="pt-4 mt-2 mx-4 border-t border-border/20">
+          <div className="flex items-center rounded-xl border border-border/30 bg-card/50 overflow-hidden">
+            <button
+              onClick={toggleTheme}
+              className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-medium hover:bg-hover transition-all duration-300 cursor-pointer border-r border-border/30"
+            >
+              {theme === "light" ? (
+                <MdDarkMode size={18} />
+              ) : (
+                <BsSunFill size={16} />
+              )}
+              <span>{theme === "light" ? "Dark" : "Light"}</span>
+            </button>
+            <a
+              href="https://github.com/chetannada/Portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-spin flex-1 flex items-center justify-center gap-2 py-3 text-sm font-medium hover:bg-hover transition-all duration-300"
+            >
+              <FaGithub size={18} />
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };
