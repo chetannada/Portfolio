@@ -33,12 +33,14 @@ const HeroContent = () => {
       animate="visible"
     >
       <motion.div variants={itemVariants}>
-        <div className="inline-flex items-center gap-2.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xs sm:text-sm font-semibold tracking-wide">
-          <span className="relative flex h-2 sm:h-2.5 w-2 sm:w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 sm:h-2.5 w-2 sm:w-2.5 bg-secondary"></span>
-          </span>
-          Available for new opportunities
+        <div className="border-beam inline-block">
+          <div className="border-beam-inner inline-flex items-center gap-2.5 px-3 sm:px-4 py-1.5 sm:py-2 text-secondary text-xs sm:text-sm font-semibold tracking-wide">
+            <span className="relative flex h-2 sm:h-2.5 w-2 sm:w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 sm:h-2.5 w-2 sm:w-2.5 bg-secondary"></span>
+            </span>
+            Available for new opportunities
+          </div>
         </div>
       </motion.div>
 
