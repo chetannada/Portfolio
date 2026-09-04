@@ -33,7 +33,7 @@ const Footer = () => {
               href="https://github.com/chetannada"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-all duration-300 hover:border-primary/50 hover:text-primary hover:shadow-md hover:shadow-primary/10"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-all duration-300 hover:border-secondary/50 hover:text-secondary hover:shadow-md hover:shadow-secondary/10"
               aria-label="GitHub"
             >
               <FaGithub size={16} />
@@ -42,7 +42,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/chetannada"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-all duration-300 hover:border-primary/50 hover:text-primary hover:shadow-md hover:shadow-primary/10"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-all duration-300 hover:border-secondary/50 hover:text-secondary hover:shadow-md hover:shadow-secondary/10"
               aria-label="LinkedIn"
             >
               <FaLinkedinIn size={16} />
@@ -51,7 +51,7 @@ const Footer = () => {
               href="https://x.com/chetannada"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-all duration-300 hover:border-primary/50 hover:text-primary hover:shadow-md hover:shadow-primary/10"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-all duration-300 hover:border-secondary/50 hover:text-secondary hover:shadow-md hover:shadow-secondary/10"
               aria-label="X (Twitter)"
             >
               <FaXTwitter size={16} />
