@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <section
         id="home"
-        className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-0"
+        className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-6 pb-16 lg:py-0"
       >
         <ParticlesBackground id="particles-home" />
 

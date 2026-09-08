@@ -3,6 +3,8 @@
 import { motion, Variants } from "framer-motion";
 import Typewriter from "./Typewriter";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiArrowRight, FiMail } from "react-icons/fi";
+import Link from "next/link";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -48,15 +50,15 @@ const HeroContent = () => {
         variants={itemVariants}
         className="mt-2 flex flex-col gap-1 sm:gap-2"
       >
-        <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-neutral-400">
+        <h2 className="text-base sm:text-lg lg:text-xl font-bold text-neutral-400">
           Hi There!{" "}
           <span className="inline-block origin-[70%_70%] animate-wave">👋</span>{" "}
           I&apos;m
         </h2>
-        <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight text-text leading-tight sm:leading-none">
+        <h1 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-text leading-tight sm:leading-none">
           Chetan Nada.
         </h1>
-        <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-secondary to-purple-500 leading-tight">
+        <h2 className="text-2xl sm:text-4xl lg:text-[3rem] font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-secondary to-purple-500 leading-tight">
           Full Stack Engineer.
         </h2>
       </motion.div>
@@ -79,36 +81,85 @@ const HeroContent = () => {
 
       <motion.div
         variants={itemVariants}
-        className="flex flex-wrap items-center gap-3 sm:gap-4 mt-6"
+        className="flex flex-wrap items-center gap-4 mt-6"
       >
-        <a
+        <Link
           href="#projects"
-          className="px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base rounded-full bg-secondary text-white font-semibold shadow-lg shadow-secondary/25 hover:shadow-secondary/40 hover:-translate-y-1 transition-all duration-300"
+          className="
+            group relative inline-flex items-center gap-2
+            rounded-xl px-7 py-3.5 text-sm font-semibold text-white
+            bg-linear-to-r from-secondary via-orange-500 to-amber-500
+            shadow-lg shadow-secondary/30
+            transition-all duration-300
+            hover:scale-105 hover:shadow-xl hover:shadow-secondary/40
+          "
         >
-          View Projects
-        </a>
-        <a
+          <span className="absolute inset-0 rounded-xl bg-linear-to-r from-secondary via-orange-500 to-amber-500 opacity-0 blur-lg transition-opacity duration-300 group-hover:opacity-60" />
+          <span className="relative z-10 flex items-center gap-2">
+            View Projects
+            <FiArrowRight
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </span>
+        </Link>
+
+        <Link
           href="#contact"
-          className="px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base rounded-full border-2 border-secondary/50 text-secondary font-semibold hover:bg-secondary/10 hover:border-secondary hover:-translate-y-1 transition-all duration-300"
+          className="
+            group relative inline-flex items-center gap-2
+            rounded-xl border border-secondary/30 px-7 py-3.5
+            text-sm font-semibold text-text
+            bg-card/60 backdrop-blur-sm
+            transition-all duration-300
+            hover:border-secondary/60 hover:bg-card/80
+            hover:shadow-lg hover:shadow-secondary/15
+            hover:scale-105
+          "
         >
+          <FiMail
+            size={16}
+            className="text-secondary/70 transition-colors duration-300 group-hover:text-secondary"
+          />
           Contact Me
-        </a>
-        <div className="flex items-center gap-2 sm:gap-3 ml-0 sm:ml-2 mt-2 sm:mt-0">
+        </Link>
+
+        <div className="flex items-center gap-3 ml-1">
           <a
             href="https://github.com/ChetanNada"
             target="_blank"
             rel="noreferrer"
-            className="p-3.5 rounded-full border border-border bg-card/50 text-neutral-600 dark:text-neutral-400 hover:border-secondary hover:text-secondary hover:-translate-y-1 transition-all duration-300 shadow-sm"
+            className="
+              group relative p-3.5 rounded-xl
+              border border-border/60 bg-card/50
+              text-neutral-500 dark:text-neutral-400
+              backdrop-blur-sm
+              transition-all duration-300
+              hover:border-neutral-700 hover:dark:border-neutral-500
+              hover:bg-neutral-800 hover:text-white
+              hover:shadow-lg hover:shadow-neutral-800/30 hover:dark:shadow-neutral-600/20
+              hover:scale-110
+            "
           >
-            <FaGithub size={20} />
+            <FaGithub size={19} />
           </a>
           <a
             href="https://www.linkedin.com/in/chetannada"
             target="_blank"
             rel="noreferrer"
-            className="p-3.5 rounded-full border border-border bg-card/50 text-neutral-600 dark:text-neutral-400 hover:border-secondary hover:text-secondary hover:-translate-y-1 transition-all duration-300 shadow-sm"
+            className="
+              group relative p-3.5 rounded-xl
+              border border-border/60 bg-card/50
+              text-neutral-500 dark:text-neutral-400
+              backdrop-blur-sm
+              transition-all duration-300
+              hover:border-[#0A66C2] hover:bg-[#0A66C2]
+              hover:text-white
+              hover:shadow-lg hover:shadow-[#0A66C2]/30
+              hover:scale-110
+            "
           >
-            <FaLinkedin size={20} />
+            <FaLinkedin size={19} />
           </a>
         </div>
       </motion.div>
