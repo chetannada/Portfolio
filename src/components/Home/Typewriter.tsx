@@ -7,11 +7,12 @@ const Typewriter = () => {
     <TypewriterComponent
       options={{
         strings: [
-          "Architecting scalable enterprise applications.",
-          "Building intelligent, AI-powered features.",
-          "Driving open-source innovation (2k+ Stars).",
-          "Engineering high-performance web interfaces.",
-          "Mentoring top engineering talent globally.",
+          "Building scalable fullstack applications.",
+          "Engineering with Reactjs, Nextjs, Nodejs & TypeScript.",
+          "Architecting fast, secure, and maintainable web experiences.",
+          "Exploring AI and building AI-powered products.",
+          "Creating open-source projects that developers use.",
+          "Mentoring developers and sharing what I learn.",
         ],
         autoStart: true,
         loop: true,

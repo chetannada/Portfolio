@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import Typewriter from "./Typewriter";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaStar, FaTrophy, FaCode } from "react-icons/fa";
 import { FiArrowRight, FiMail } from "react-icons/fi";
 import Link from "next/link";
 
@@ -70,14 +70,54 @@ const HeroContent = () => {
         <Typewriter />
       </motion.div>
 
-      <motion.p
-        variants={itemVariants}
-        className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed mt-2"
-      >
-        I specialize in architecting scalable enterprise web applications,
-        building reusable design systems, and integrating intelligent AI-powered
-        solutions to solve complex business problems.
-      </motion.p>
+      <motion.div variants={itemVariants} className="flex flex-col gap-4 mt-3">
+        <div className="flex flex-wrap items-center gap-3 mt-1">
+          {[
+            {
+              icon: <FaStar size={16} className="text-secondary" />,
+              stat: "2K+",
+              label: "GitHub Stars",
+              href: "https://github.com/chetannada/Namaste-React",
+            },
+            {
+              icon: <FaTrophy size={16} className="text-secondary" />,
+              stat: "Top 1%",
+              label: "Topmate Mentor",
+              href: "https://topmate.io/chetannada",
+            },
+            {
+              icon: <FaCode size={16} className="text-secondary" />,
+              stat: "600+",
+              label: "DSA Problems",
+              href: "https://leetcode.com/u/chetannada/",
+            },
+          ].map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              className="
+                inline-flex items-center gap-2.5 px-4 py-2
+                rounded-xl border border-border/40
+                bg-card/40 backdrop-blur-sm
+                transition-all duration-300
+                hover:border-secondary/40 hover:bg-card/70
+                hover:shadow-md hover:shadow-secondary/10
+                hover:scale-105 cursor-pointer
+              "
+            >
+              {item.icon}
+              <span className="flex flex-col leading-tight">
+                <span className="text-sm font-bold text-text">{item.stat}</span>
+                <span className="text-[0.65rem] font-medium text-neutral-400 dark:text-neutral-500">
+                  {item.label}
+                </span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </motion.div>
 
       <motion.div
         variants={itemVariants}
